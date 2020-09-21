@@ -1,13 +1,13 @@
 import React from "react";
 
 import requests from "../../requests";
-import Row from "../Components/Row";
-import Banner from "../Components/Banner";
-// import "./Main.css";
+import Row from "../Components/MainComponents/Row";
+import Banner from "../Components/MainComponents/Banner";
+import "./Main.css";
 
 const Main = () => {
   return (
-    <React.Fragment>
+    <div className="main">
       <Banner />
       <Row
         title="NETFLIX ORIGINALS"
@@ -21,7 +21,7 @@ const Main = () => {
       <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
       <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
       <Row title="Documentries" fetchUrl={requests.fetchDocumentries} />
-    </React.Fragment>
+    </div>
   );
 };
 

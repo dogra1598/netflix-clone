@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-import axios from "../../axios";
-import requests from "../../requests";
+import axios from "../../../axios";
+import requests from "../../../requests";
+import Button from "../../../shared/UIElements/Button/Button";
 import "./Banner.css";
 
 const Banner = () => {
@@ -38,8 +39,8 @@ const Banner = () => {
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
         <div className="banner__buttons">
-          <button className="banner__button">Play</button>
-          <button className="banner__button">My List</button>
+          <Button type="button" className="banner__button" title="Play" />
+          <Button type="button" className="banner__button" title="My List" />
         </div>
         <h1 className="banner__description">{truncate(movie?.overview, 150)}</h1>
       </div>
