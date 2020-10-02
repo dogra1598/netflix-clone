@@ -1,15 +1,20 @@
 .faq {
-    padding: 7rem 4.5rem;
-    background-color: black;
+  padding: 7rem 4.5rem;
+  background-color: black;
 }
 
 .faq__title {
-    color: #fff;
-    text-align: center;
-    margin-bottom: 4rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
 .faq__title h1 {
-    font-size: 5rem;
+  font-size: 4rem;
 }
 
+@media (min-width: 37.5em) {
+  .faq__title h1 {
+    font-size: 5rem;
+  }
+}

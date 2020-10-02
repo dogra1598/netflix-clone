@@ -1,0 +1,47 @@
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 10%;
+}
+
+.signup__primaryHeading {
+  color: #333;
+  font-size: 5rem;
+  width: 30rem;
+  text-align: center;
+}
+
+.signup__secondaryHeading {
+  color: #333;
+  font-weight: 400;
+  font-size: 2rem;
+  padding: 0 4rem;
+  text-align: center;
+}
+
+.submit {
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  border-radius: 0.3rem;
+  padding: 1rem 1.5rem;
+  background-color: #e50914;
+  text-decoration: none;
+  margin-top: 4rem;
+  margin-left: 35%;
+}
+
+.disableSubmit {
+  cursor: not-allowed;
+}
+
+@media(min-width: 37.5em) {
+  .signup__secondaryHeading {
+    width: 50rem;
+  }
+}

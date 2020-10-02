@@ -1,18 +1,64 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
-// import Navbar from "./shared/Navbar/Navbar";
-// import Main from "./Main/Pages/Main";
-// import Button from "./shared/UIElements/Button/Button"
+import { useAuth } from "./shared/hook/authHook";
+import { AuthContext } from "./shared/context/authContext";
+import Main from "./Netfix-clone/Pages/Main";
 import Home from "./Netfix-clone/Pages/Home";
-// import "./App.css";
+import Signup from "./Auth/Signup";
+import Login from "./Auth/Login";
+import Navbar from "./shared/Navbar/Navbar";
 
 const App = () => {
+  const { token, userId, login, logout } = useAuth();
+  let routes;
+
+  if (token) {
+    routes = (
+      <Switch>
+        <Route path="/" exact>
+          <Main />
+        </Route>
+        <Redirect to="/" />
+      </Switch>
+    );
+  } else {
+    routes = (
+      <Switch>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/signup" exact>
+          <Signup />
+        </Route>
+        <Route path="/login" exact>
+          <Login />
+        </Route>
+        <Redirect to="/login" />
+      </Switch>
+    );
+  }
+
   return (
-    <div className="app">
-      {/* <Navbar />
-      <Main /> */}
-      <Home />
-    </div>
+    <AuthContext.Provider
+      value={{
+        isLoggedIn: !!token,
+        token: token,
+        login: login,
+        logout: logout,
+        userId: userId,
+      }}
+    >
+      <Router>
+        <Navbar />
+        {routes}
+      </Router>
+    </AuthContext.Provider>
   );
 };
 

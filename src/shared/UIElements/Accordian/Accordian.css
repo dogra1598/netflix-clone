@@ -1,72 +1,87 @@
 .accordion {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 0.2rem;
-    margin: 0 10rem;
-    margin-top: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.2rem;
+  margin-top: 0.5rem;
 }
 
 .accordion__item + .accordion__item {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .accordion__button {
-    background-color: #222;
-    color: #fff;
-    cursor: pointer;
-    padding: 2rem;
-    font-size: 2.8rem;
-    font-weight: 700;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
+  background-color: #222;
+  color: #fff;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
 
-    transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .accordion__button:before {
-    display: inline-block;
-    content: '';
-    height: 10px;
-    width: 10px;
-    margin-right: 12px;
-    border-bottom: 2px solid currentColor;
-    border-right: 2px solid currentColor;
-    transform: rotate(-45deg);
+  display: inline-block;
+  content: "";
+  height: 10px;
+  width: 10px;
+  margin-right: 12px;
+  border-bottom: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(-45deg);
 
-    transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-.accordion__button[aria-expanded='true']::before,
-.accordion__button[aria-selected='true']::before {
-    transform: rotate(45deg);
+.accordion__button[aria-expanded="true"]::before,
+.accordion__button[aria-selected="true"]::before {
+  transform: rotate(45deg);
 }
 
 [hidden] {
-    display: none;
+  display: none;
 }
 
 .accordion__panel {
-    color: #fff;
-    font-size: 2.5rem;
-    padding: 20px;
-    animation: fadein 1s ease-in;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 20px;
+  animation: fadein 1s ease-in;
 }
 
 @keyframes fadein {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    30% {
-        opacity: 0.4;
-    }
+  30% {
+    opacity: 0.4;
+  }
 
-    60% {
-        opacity: 0.8;
-    }
+  60% {
+    opacity: 0.8;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .accordion {
+    margin: 0 10rem;
+  }
+
+  .accordion__button {
+    padding: 2rem;
+    font-size: 2.8rem;
+    font-weight: 700;
+  }
+
+  .accordion__panel {
+    font-size: 2.5rem;
+  }
 }

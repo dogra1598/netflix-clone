@@ -3,13 +3,13 @@ import React from "react";
 import Navbar from "../../shared/Navbar/Navbar";
 import Header from "../Components/HomeComponents/Header";
 import Feature from "../../Netfix-clone/Components/HomeComponents/Feature";
+import Faq from "../../Netfix-clone/Components/HomeComponents/Faq";
+import Footer from "../../shared/Footer/Footer";
+
 import tvImg from "../../Assets/Images/tv.png";
 import mobileImg from "../../Assets/Images/mobile.jpg"
 import boxshot from "../../Assets/Images/boxshot.png";
-import download from "../../Assets/Images/download.gif"
-import Faq from "../../Netfix-clone/Components/HomeComponents/Faq";
-import Footer from "../../shared/Footer/Footer";
-// import "./Home.css";
+import download from "../../Assets/Images/download.gif";
 
 const Home = () => {
   return (

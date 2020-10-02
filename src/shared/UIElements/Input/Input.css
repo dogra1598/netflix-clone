@@ -1,0 +1,38 @@
+.formgroup {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.formgroup label {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.formgroup input {
+  padding: 1rem 0;
+  font-size: 2rem;
+  border: none;
+  border-bottom: 2px solid #333;
+  width: 28rem;
+}
+
+.formgroup input:focus {
+  outline: none;
+  border-color: #e48832;
+}
+
+.invalidInput input {
+  border-color: red;
+}
+
+.inputError {
+  color: red;
+  font-size: 1.8rem;
+}
+
+@media (min-width: 37.5em) {
+  .formgroup input {
+    width: 40rem;
+  }
+}

@@ -3,9 +3,18 @@
   color: #fff;
   outline: none;
   border: none;
-  font-size: 2rem;
+  font-size: 1.4rem;
   border-radius: 0.3rem;
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0 0.5rem 1rem;
   background-color: #e50914;
   text-decoration: none;
+}
+
+@media (min-width: 48em) {
+  .btn {
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    margin: 0.5rem;
+  }
 }

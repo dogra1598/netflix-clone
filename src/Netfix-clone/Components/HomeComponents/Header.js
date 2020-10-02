@@ -26,7 +26,7 @@ const Header = () => {
 
         <div className="header__signup">
           <h2>Ready to watch? Sign up to create your membership.</h2>
-          <Button type="link" href="#" title="Get Started &rarr;" />    {/* signup link */}
+          <Button type="link" href="/signup" title="Get Started &rarr;" />
         </div>
       </div>
     </div>

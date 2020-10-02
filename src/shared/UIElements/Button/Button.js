@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import "./Button.css";
 
@@ -6,26 +7,26 @@ const Button = (props) => {
   let button = null;
   if (props.type === "link") {
     button = (
-      <a
-        href={props.href}
+      <NavLink
+        to={props.href}
         className={`btn ${props.className ? props.className : ""}`}
+        onClick={props.onClick}
       >
         {props.title}
-      </a>
+      </NavLink>
     );
   } else {
     button = (
-      <button className={`btn ${props.className ? props.className : ""}`}>
+      <button
+        className={`btn ${props.className ? props.className : ""}`}
+        onClick={props.onClick}
+      >
         {props.title}
       </button>
     );
   }
 
-  return (
-    <React.Fragment>
-        {button}
-    </React.Fragment>
-  );
+  return <React.Fragment>{button}</React.Fragment>;
 };
 
 export default Button;
